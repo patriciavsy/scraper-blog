@@ -1,0 +1,8 @@
+__pycache__/
+node_modules/
+venv/
+.vscode/
+.git
+.gitignore
+*.deb
+.env
