@@ -1,14 +1,4 @@
 from bs4 import BeautifulSoup as _bs4
-from selenium import webdriver 
-from selenium.webdriver.chrome.service import Service 
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, ElementClickInterceptedException
-from selenium.webdriver.chrome.options import Options
-
-from webdriver_manager.chrome import ChromeDriverManager
-
 
 import time
 
@@ -23,14 +13,6 @@ import os
 
 
 load_dotenv()
-
-
-options = Options()
-options.add_argument("--headless")  # no abre ventana
-options.add_argument("--disable-gpu")
-options.add_argument("--no-sandbox")
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-
 
 
 
