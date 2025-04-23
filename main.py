@@ -35,6 +35,7 @@ async def posts_by_category(query: Query):
     try:
         category_1 = query.category
         webhook = query.webhook
+        email = query.email
 
         category = normalize_category(category_1)
 
@@ -56,7 +57,7 @@ async def posts_by_category(query: Query):
                 url=webhook, 
                 headers=headers, 
                 json={
-                    "email": os.environ.get("SEND_EMAIL"),
+                    "email": email,
                     "link": link_sheet,
                 }
             )
