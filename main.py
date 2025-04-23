@@ -22,6 +22,7 @@ app = FastAPI()
 class Query(BaseModel):
     category: str
     webhook: str
+    email: str
 
 
 
